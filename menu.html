@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dana Rest Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #333 0%, #111 100%); /* Dark Grey to Black Gradient */
+            background-attachment: fixed;
+            color: #f4f4f4;
+            line-height: 1.6;
+            padding-top: 60px; /* Add padding to avoid content behind fixed navbar */
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 100; /* Ensure it stays on top */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffc107; /* Gold hover effect */
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #ffc107; /* Gold accent */
+        }
+
+        header {
+            text-align: center; /* Center the main title */
+            padding: 60px 20px 40px; /* Adjust padding for spacing */
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #ffc107; /* Gold accent */
+            display: inline-block;
+            padding-bottom: 10px;
+            color: #f4f4f4;
+        }
+
+        .menu-section {
+            padding: 20px 0;
+        }
+
+        .menu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background-color: rgba(34, 34, 34, 0.9); /* Dark menu item */
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #f4f4f4;
+            border: 1px solid #333;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .item-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffc107; /* Gold accent */
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark footer */
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            color: #ffc107; /* Gold accent */
+        }
+
+        .social-icons a {
+            color: #ffc107; /* Gold accent */
+            margin: 0 10px;
+            font-size: 22px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #f4f4f4;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            nav {
+                justify-content: space-around; /* Distribute links on smaller screens */
+            }
+            nav a {
+                margin: 0 5px;
+                font-size: 14px;
+            }
+            header h1 {
+                font-size: 36px;
+            }
+
+            .menu-container {
+                grid-template-columns: 1fr 1fr; /* Two columns on tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column; /* Stack links on very small screens */
+                align-items: center;
+                padding: 10px 0;
+            }
+            nav a {
+                margin: 5px 0;
+                font-size: 16px;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+
+            .menu-container {
+                grid-template-columns: 1fr; /* One column on phones */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#breakfast">Breakfast | ژەمى بەیانیان</a>
+        <a href="#drinks">Drinks | خواردنەوەکان</a>
+        <a href="#starters">Starters | مقبلات</a>
+        <a href="#main-courses">Main Courses | ژەمە سەرەکییەکان</a>
+    </nav>
+
+    <header>
+        <h1>Dana Rest Menu</h1>
+    </header>
+
+    <section id="breakfast" class="menu-section">
+        <h2>Breakfast | ژەمى بەیانیان (ریبوک)</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <div class="item-name"><div>Egg</div><div>هێلکە (بيض)</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Double cream</div><div>قەیماغ (قيمر)</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Yogurt</div><div>ماست (لبن)</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Cheese</div><div>پەنیری کارتات (جبن كرافت)</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Honey</div><div>هەنگوین (عسل)</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Walnut</div><div>گویز (جوز)</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Lentil soup</div><div>شۆربای نیسک (شوربة عدس)</div></div>
+                <div class="price">2,500</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="drinks" class="menu-section">
+        <h2>Drinks | خواردنەوەکان (مشروبات)</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <div class="item-name"><div>Ayran</div><div>ماستاو (شنينة)</div></div>
+                <div class="price">1,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Pepsi</div><div>بیبسی (بیبسی)</div></div>
+                <div class="price">500</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Pepsi fresh</div><div>بیبسی فرش (بیبسی طازج)</div></div>
+                <div class="price">1,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Coffee - nescafe - cappuccino</div><div>قاوە (قهوه - نیسکافە - کاپیتشینۆ)</div></div>
+                <div class="price">1,500</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="starters" class="menu-section">
+        <h2>Starters | مقبلات</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <div class="item-name"><div>Small Starter</div><div>مقبلات بچوك مقبلات صغير</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Big Starter</div><div>مقبلات گەورە مقبلات كبير</div></div>
+                <div class="price">5,000</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-courses" class="menu-section">
+        <h2>Main Courses | ژەمە سەرەکییەکان</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <div class="item-name"><div>Qozi (rice & beef & soup)</div><div>قۆزی (قوزی)</div></div>
+                <div class="price">15,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>2 Portion Qozi/1 (rice & beef & soup)</div><div>نیو قۆزی (نصف قوزی)</div></div>
+                <div class="price">12,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Tashrib (beef & bread soup recipe)</div><div>تەشریب (تشريب)</div></div>
+                <div class="price">10,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Tashrib (bread soup recipe)</div><div>تەشریب سادە</div></div>
+                <div class="price">3,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Turkey & rice & soup</div><div>قەلەڕەش و برنج (ديك رومي)</div></div>
+                <div class="price">20,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Goose & rice & soup</div><div>قاز و برنج</div></div>
+                <div class="price">20,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Rooster & rice & soup (دیک کردی)</div><div>کەلەشێری کوردی (ديك كردي)</div></div>
+                <div class="price">15,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Chiccken & rice & soup (دجاج علی التمن)</div><div>برنج و مریشک (دجاج على التمن)</div></div>
+                <div class="price">10,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Rice & soup (برنج و شله ی ساده(تمن و مرغ))</div><div>برنج و شله ی ساده(تمن و مرغ)</div></div>
+                <div class="price">4,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Nawashf beef</div><div>نواشف گوشت</div></div>
+                <div class="price">9,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Nawashf chiken</div><div>نواشف مریشک</div></div>
+                <div class="price">6,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Kebab</div><div>كباب</div></div>
+                <div class="price">5,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Barbecue (beef or Lamab)</div><div>باربیکیو (تکە لحم)</div></div>
+                <div class="price">5,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Barbecue Chicken</div><div>باربیکیو دجاج (تکە دجاج)</div></div>
+                <div class="price">5,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Barbecue Wings</div><div>باڵ باربیکیو</div></div>
+                <div class="price">5,000</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name"><div>Barbecue Liver</div><div>جەرگ باربیکیو (معلاک)</div></div>
+                <div class="price">5,000</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dana Rest. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/dana_rest1958?igsh=MXZ3YTAxY2Z3MXpldA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@danarest1958?_t=ZS-8wKM1DKu9eS&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/share/18tY1VdDKA/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
